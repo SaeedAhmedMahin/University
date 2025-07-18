@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="weather__header">
+            <form class="weather__search">
+                <input type="text" id="searchInput" placeholder="Search for a city..." class="weather__searchform">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form> 
+            <div class="weather__units">
+                <span class="weather_unit_farenheit" onclick="convertToFahrenheit()" >&#176<span id="units" >C</span></span>
+                
+            </div>
+        </div>
+        <div class="weather__body">
+            <h1 class="weather__city"> {{ city }}, {{ country }}</h1>
+            <div class="weather__datetime">{{ today.strftime('%A, %B %d, %Y at %I:%M %p') }}
+            </div>
+            <div class="weather__forecast">{{ weather_condition }}</div>
+            <div class="weather__icon"><i class="{{ icon }}"></i>
+            </div>
+            <p class="weather__temperature"><span id="temp_1">{{ temperature }}</span>&#176
+            </p>
+            <div class="weather__minmax">
+                <p>Low: <span id="temp_2">{{ min_temp }}</span>&#176</p>
+                <p>High: <span id="temp_3">{{ max_temp }}</span>&#176</p>
+            </div>
+        </div>
+
+        <div class="weather__info">
+            <div class="weather__card">
+                <i class="fa-solid fa-temperature-full"></i>
+                <div>
+                    <p class="txt">Feels Like</p>
+                    <p class="weather__realfeel txt" ><span id="temp_4">{{ apparent_temp }}</span>&#176</p>
+                  </div>
+            </div>
+            <div class="weather__card">
+                <i class="fa-solid fa-droplet"></i>
+                <div>
+                    <p class="txt">Humidity</p>
+                    <p class="weather__humidity txt">{{current_humidity}}&#37</p>
+                </div>
+            </div>
+            <div class="weather__card">
+                <i class="fa-solid fa-wind"></i>
+                <div>
+                    <p class="txt">Wind Speed</p>
+                    <p class="weather__wind txt">{{windspeed}} km/h</p>
+                </div>
+            </div>
+            <div class="weather__card">
+                <i class="fa-solid fa-gauge-high"></i>
+                <div>
+                    <p class="txt">Pressure</p>
+                    <p class="weather__pressure txt">{{current_pressure}} hPa</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="weather__card">
+                <i class="fa-solid fa-comments"></i>
+                <div>
+                    
+                    <p class="txt" > {{ joke }}</p>
+                    
+                </div>
+            </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    
+</body>
+</html>
