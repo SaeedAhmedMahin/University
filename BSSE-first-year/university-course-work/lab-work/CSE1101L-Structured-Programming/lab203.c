@@ -4,8 +4,8 @@ the factorial operator using recursion
 */
 #include<stdio.h>
 long factorial (long a){
-    if( a==1){
-        return a;
+    if( a==0){
+        return 1;
     }
     return a*factorial((a-1));
 }
