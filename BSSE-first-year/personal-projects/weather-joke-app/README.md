@@ -43,3 +43,6 @@ Contributions are welcome! Please follow these steps to contribute:
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
+## Images of the app
+
+![screenshot](doc/images/img1.xcf)
