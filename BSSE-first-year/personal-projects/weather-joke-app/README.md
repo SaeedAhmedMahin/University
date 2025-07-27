@@ -45,4 +45,4 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ## Images of the app
 
-![screenshot](doc/images/img1.xcf)
+![screenshot 1](doc/images/img1.png)
