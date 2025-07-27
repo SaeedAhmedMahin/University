@@ -46,3 +46,7 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 ## Images of the app
 
 ![screenshot 1](doc/images/img1.png)
+![screenshot 2](doc/images/img2.png)
+![screenshot 3](doc/images/img3.png)
+![screenshot 4](doc/images/img4.png)
+![screenshot 5](doc/images/img5.png)
