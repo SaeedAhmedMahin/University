@@ -6,6 +6,8 @@ d e f
 g h i
 it returns 1 if player wins or 0 if player loses or 2 if its a draw or 3 if game hasnt ended
 player is always O and bot is always X */
+
+// references: C documentation from https://devdocs.io/c/
 int tic_tac_toe_grid(char a, char b, char c, char d, char e, char f, char g, char h, char i){
     printf("\n");
     printf("%c  %c  %c  \n", a,b,c);
